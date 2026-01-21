@@ -3,11 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cannabis Prices by State 2026 - Live Market Data Tracker</title>
-    <meta name="description" content="Real-time cannabis flower prices across legal U.S. states. Updated monthly with official state data. Interactive price map and market analysis.">
+    <title>Cannabis Prices by State 2026 - Market Data Tracker</title>
+    <meta name="description" content="Cannabis flower prices across legal U.S. states. Updated monthly with official state regulatory data. Interactive price map and market analysis.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.dankreports.com/about/#person",
+          "name": "Daniel Kief",
+          "url": "https://www.dankreports.com/about/",
+          "jobTitle": "Cannabis Policy Analyst & Researcher",
+          "description": "Independent researcher specializing in cannabis market analysis, regulatory economics, and black market displacement dynamics.",
+          "sameAs": [
+            "https://orcid.org/0009-0003-1402-7503",
+            "https://dataverse.harvard.edu/dataverse/danielkief",
+            "https://doi.org/10.7910/DVN/BVIQNN",
+            "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=9476372",
+            "https://scholar.google.com/citations?user=4rUyqKoAAAAJ&hl=en&authuser=1",
+            "https://github.com/Dan-K-Reports",
+            "https://x.com/dankreports"
+          ],
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "ORCID",
+            "value": "0009-0003-1402-7503"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.dankreports.com/#organization",
+          "name": "Dan K Reports",
+          "url": "https://www.dankreports.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.dankreports.com/content/images/2025/12/Transparent-Logo-min-1.png"
+          },
+          "description": "Independent cannabis policy research and market analysis",
+          "founder": {
+            "@id": "https://www.dankreports.com/about/#person"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://prices.dankreports.com/#website",
+          "url": "https://prices.dankreports.com/",
+          "name": "Cannabis Price Tracker",
+          "publisher": {
+            "@id": "https://www.dankreports.com/#organization"
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "Dataset",
+          "@id": "https://prices.dankreports.com/#dataset",
+          "name": "Cannabis Prices by State - Market Data",
+          "description": "Monthly-updated cannabis flower pricing across U.S. legal markets, compiled from official state cannabis regulatory agencies and standardized to USD per gram.",
+          "url": "https://prices.dankreports.com/",
+          "inLanguage": "en-US",
+          "keywords": [
+            "cannabis prices by state",
+            "marijuana prices",
+            "cannabis market data",
+            "legal cannabis pricing",
+            "state cannabis prices",
+            "cannabis price comparison",
+            "dispensary prices",
+            "cannabis market analysis"
+          ],
+          "creator": {
+            "@id": "https://www.dankreports.com/about/#person"
+          },
+          "publisher": {
+            "@id": "https://www.dankreports.com/#organization"
+          },
+          "mainEntityOfPage": {
+            "@id": "https://prices.dankreports.com/"
+          },
+          "datePublished": "2026-01-20",
+          "dateModified": "2026-01-20",
+          "temporalCoverage": "2024-12/2025-12",
+          "variableMeasured": [
+            {
+              "@type": "PropertyValue",
+              "name": "flowerPrice",
+              "description": "Retail price per gram from state-reported dispensary sales data"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "dataDate",
+              "description": "Reporting period (month/quarter of data collection)"
+            }
+          ],
+          "measurementTechnique": "Compiled from official state regulatory dashboards and reports; standardized to USD per gram for cross-state comparability.",
+          "spatialCoverage": [
+            {
+              "@type": "Place",
+              "name": "California",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 36.7783,
+                "longitude": -119.4179
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Colorado",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.5501,
+                "longitude": -105.7821
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Illinois",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 40.6331,
+                "longitude": -89.3985
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Maine",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 45.2538,
+                "longitude": -69.4455
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Maryland",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0458,
+                "longitude": -76.6413
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Massachusetts",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 42.4072,
+                "longitude": -71.3824
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Michigan",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 44.3148,
+                "longitude": -85.6024
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Oregon",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 43.8041,
+                "longitude": -120.5542
+              }
+            }
+          ],
+          "distribution": [
+            {
+              "@type": "DataDownload",
+              "encodingFormat": "text/html",
+              "contentUrl": "https://prices.dankreports.com/"
+            }
+          ],
+          "isAccessibleForFree": true,
+          "license": "https://creativecommons.org/licenses/by/4.0/"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://prices.dankreports.com/",
+          "url": "https://prices.dankreports.com/",
+          "name": "Cannabis Prices by State 2026 - Market Data Tracker",
+          "description": "Cannabis flower prices across legal U.S. states using official state data. Updated monthly with sources and methodology.",
+          "isPartOf": {
+            "@id": "https://prices.dankreports.com/#website"
+          },
+          "mainEntity": {
+            "@id": "https://prices.dankreports.com/#dataset"
+          },
+          "datePublished": "2026-01-20",
+          "dateModified": "2026-01-20",
+          "inLanguage": "en-US"
+        }
+      ]
+    }
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -519,7 +716,7 @@
     <header>
         <div class="header-content">
             <h1>Cannabis Prices by State</h1>
-            <p class="subtitle">Real-time flower pricing from official state regulatory data</p>
+            <p class="subtitle">Monthly flower pricing from official state regulatory data</p>
             <div class="data-badge">
                 <span class="pulse-dot"></span>
                 <span>Updated Monthly • January 2026</span>
@@ -583,7 +780,7 @@
             </div>
             <div style="color: var(--text-primary); line-height: 1.8; font-size: 1rem; max-width: 900px;">
                 <p style="margin-bottom: var(--space-md);">
-                    Cannabis prices vary dramatically across U.S. legal markets, with flower ranging from <strong>$1.40 per gram in California</strong> to <strong>$8.28 per gram in Maryland</strong>. This price tracker compiles official data from state cannabis regulatory agencies to provide the most accurate, up-to-date pricing information available for legal adult-use cannabis markets.
+                    Cannabis prices vary dramatically across U.S. legal markets, with flower ranging from <strong>$2.96 per gram in Michigan</strong> to <strong>$8.28 per gram in Maryland</strong>. This price tracker compiles official data from state cannabis regulatory agencies to provide the most accurate, up-to-date pricing information available for legal adult-use cannabis markets.
                 </p>
                 
                 <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin: var(--space-lg) 0 var(--space-md) 0; color: var(--accent-green);">Why Cannabis Prices Differ by State</h3>
@@ -603,7 +800,7 @@
                 
                 <h4 style="font-family: var(--font-mono); font-size: 1.1rem; margin: var(--space-md) 0 var(--space-sm) 0; color: var(--text-primary);">Low-Price Markets (Under $4/gram)</h4>
                 <p style="margin-bottom: var(--space-md);">
-                    <strong>California ($1.40/gram)</strong> offers the lowest wholesale cannabis prices in the nation, driven by massive outdoor cultivation capacity and intense market competition. However, pre-packaged retail flower can range significantly higher. <strong>Michigan ($2.96/gram)</strong> has rapidly expanded its market with competitive pricing driven by a large number of licensed cultivators. <strong>Colorado ($3.18/gram)</strong> and <strong>Oregon ($3.33/gram)</strong> represent mature markets with established supply chains and efficient production, resulting in consistently low consumer prices.
+                    <strong>Michigan ($2.96/gram)</strong> offers highly competitive pricing driven by a large number of licensed cultivators and robust market competition. <strong>Colorado ($3.18/gram)</strong> and <strong>California ($3.20/gram)</strong> represent mature West Coast markets with established supply chains and efficient production. <strong>Oregon ($3.33/gram)</strong> completes the low-cost tier, benefiting from favorable growing conditions and competitive licensing.
                 </p>
                 
                 <h4 style="font-family: var(--font-mono); font-size: 1.1rem; margin: var(--space-md) 0 var(--space-sm) 0; color: var(--text-primary);">Mid-Range Markets ($4-$6/gram)</h4>
@@ -710,10 +907,10 @@
                 },
                 "CA": {
                     "name": "California",
-                    "flowerPrice": 1.4,
+                    "flowerPrice": 3.20,
                     "dataDate": "2025-11",
                     "source": "https://www.cannabis.ca.gov/resources/data-dashboard/daily-sales-units-by-item-category-report/",
-                    "notes": "Bulk flower price (wholesale), pre-packaged ranges $1.40-$23.44/g"
+                    "notes": "Retail price - packaged half ounce"
                 },
                 "ME": {
                     "name": "Maine",
