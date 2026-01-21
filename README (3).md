@@ -16,7 +16,7 @@ Real-time cannabis flower pricing across U.S. legal markets. Updated monthly wit
 
 ## Price Range (Current)
 
-- **Lowest**: California ($1.40/gram)
+- **Lowest**: Michigan ($2.96/gram)
 - **Highest**: Maryland ($8.28/gram)
 - **Median**: $4.13/gram
 
