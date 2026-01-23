@@ -87,7 +87,7 @@
             "@id": "https://prices.dankreports.com/"
           },
           "datePublished": "2026-01-20",
-          "dateModified": "2026-01-20",
+          "dateModified": "2026-01-23",
           "temporalCoverage": "2024-12/2025-12",
           "variableMeasured": [
             {
@@ -168,6 +168,15 @@
             },
             {
               "@type": "Place",
+              "name": "Minnesota",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 46.7296,
+                "longitude": -94.6859
+              }
+            },
+            {
+              "@type": "Place",
               "name": "Oregon",
               "geo": {
                 "@type": "GeoCoordinates",
@@ -199,7 +208,7 @@
             "@id": "https://prices.dankreports.com/#dataset"
           },
           "datePublished": "2026-01-20",
-          "dateModified": "2026-01-20",
+          "dateModified": "2026-01-23",
           "inLanguage": "en-US"
         }
       ]
@@ -780,7 +789,7 @@
             </div>
             <div style="color: var(--text-primary); line-height: 1.8; font-size: 1rem; max-width: 900px;">
                 <p style="margin-bottom: var(--space-md);">
-                    Cannabis prices vary dramatically across U.S. legal markets, with flower ranging from <strong>$2.96 per gram in Michigan</strong> to <strong>$8.28 per gram in Maryland</strong>. This price tracker compiles official data from state cannabis regulatory agencies to provide the most accurate, up-to-date pricing information available for legal adult-use cannabis markets.
+                    Cannabis prices vary dramatically across U.S. legal markets, with flower ranging from <strong>$2.96 per gram in Michigan</strong> to <strong>$13.54 per gram in Minnesota</strong>. This price tracker compiles official data from state cannabis regulatory agencies to provide the most accurate, up-to-date pricing information available for legal adult-use cannabis markets.
                 </p>
                 
                 <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin: var(--space-lg) 0 var(--space-md) 0; color: var(--accent-green);">Why Cannabis Prices Differ by State</h3>
@@ -789,11 +798,11 @@
                 </p>
                 
                 <p style="margin-bottom: var(--space-md);">
-                    <strong>Licensing density and market structure</strong> are the dominant factors in pricing. States with restrictive licensing caps create artificial scarcity that elevates prices, while markets with competitive licensing see prices driven down through market forces. <strong>Market maturity</strong> compounds this effect - established markets like Colorado and Oregon have developed efficient cultivation operations and distribution networks over years, while newer markets like Maryland face higher prices as infrastructure develops.
+                    <strong>Licensing density and market structure</strong> are the dominant factors in pricing. States with restrictive licensing caps create artificial scarcity that elevates prices, while markets with competitive licensing see prices driven down through market forces. <strong>Market maturity</strong> compounds this effect - established markets like Colorado and Oregon have developed efficient cultivation operations and distribution networks over years, while newer markets like Maryland and Minnesota face higher prices as infrastructure develops.
                 </p>
                 
                 <p style="margin-bottom: var(--space-md);">
-                    <strong>Regional production costs</strong> play a secondary but significant role. West Coast states benefit from favorable outdoor growing climates and lower energy costs for year-round production. East Coast markets face higher overhead expenses for indoor cultivation facilities, climate control, and energy. Some states implement wholesale excise taxes collected at the cultivation level, which are embedded in retail pricing, but these represent a minor component compared to structural market efficiency factors.
+                    <strong>Regional production costs</strong> play a secondary but significant role. West Coast states benefit from favorable outdoor growing climates and lower energy costs for year-round production. East Coast and Midwest markets face higher overhead expenses for indoor cultivation facilities, climate control, and energy. Some states implement wholesale excise taxes collected at the cultivation level, which are embedded in retail pricing, but these represent a minor component compared to structural market efficiency factors.
                 </p>
                 
                 <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin: var(--space-lg) 0 var(--space-md) 0; color: var(--accent-green);">State-by-State Cannabis Price Analysis</h3>
@@ -810,7 +819,7 @@
                 
                 <h4 style="font-family: var(--font-mono); font-size: 1.1rem; margin: var(--space-md) 0 var(--space-sm) 0; color: var(--text-primary);">High-Price Markets (Over $6/gram)</h4>
                 <p style="margin-bottom: var(--space-md);">
-                    <strong>Maine ($6.38/gram)</strong> reflects pricing dynamics in smaller East Coast markets with limited economies of scale. <strong>Maryland ($8.28/gram)</strong> represents the highest prices tracked, characteristic of a newer market (adult-use sales began July 2023) still developing cultivation capacity and distribution networks. As Maryland's market matures, prices are expected to decline toward the national median.
+                    <strong>Maine ($6.38/gram)</strong> reflects pricing dynamics in smaller East Coast markets with limited economies of scale. <strong>Maryland ($8.28/gram)</strong> represents the second-highest prices tracked, characteristic of a newer market (adult-use sales began July 2023) still developing cultivation capacity and distribution networks. <strong>Minnesota ($13.54/gram)</strong> shows the highest prices in the nation, reflecting an extremely new market (adult-use sales began August 2024) with very limited retail infrastructure and cultivator capacity. As these markets mature, prices are expected to decline toward the national median.
                 </p>
                 
                 <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin: var(--space-lg) 0 var(--space-md) 0; color: var(--accent-green);">Data Sources and Methodology</h3>
@@ -868,7 +877,7 @@
     <script>
         // Embedded price data - update this section monthly
         const PRICE_DATA = {
-            "lastUpdated": "2026-01-20",
+            "lastUpdated": "2026-01-23",
             "states": {
                 "OR": {
                     "name": "Oregon",
@@ -925,6 +934,13 @@
                     "dataDate": "2025-12",
                     "source": "https://cannabis.maryland.gov/pages/data-dashboard.aspx",
                     "notes": "YTD 2025 median price per gram"
+                },
+                "MN": {
+                    "name": "Minnesota",
+                    "flowerPrice": 13.54,
+                    "dataDate": "2025-12",
+                    "source": "https://mn.gov/ocm/data-reports/dashboards/cannabis-market-monitor.jsp",
+                    "notes": "Average retail price per gram"
                 }
             }
         };
