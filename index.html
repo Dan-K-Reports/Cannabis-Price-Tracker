@@ -87,7 +87,7 @@
             "@id": "https://prices.dankreports.com/"
           },
           "datePublished": "2026-01-20",
-          "dateModified": "2026-02-05",
+          "dateModified": "2026-02-22",
           "temporalCoverage": "2024-12/2025-12",
           "variableMeasured": [
             {
@@ -186,6 +186,15 @@
             },
             {
               "@type": "Place",
+              "name": "Montana",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 46.8797,
+                "longitude": -110.3626
+              }
+            },
+            {
+              "@type": "Place",
               "name": "Ohio",
               "geo": {
                 "@type": "GeoCoordinates",
@@ -235,7 +244,7 @@
             "@id": "https://prices.dankreports.com/#dataset"
           },
           "datePublished": "2026-01-20",
-          "dateModified": "2026-01-28",
+          "dateModified": "2026-02-22",
           "inLanguage": "en-US"
         }
       ]
@@ -904,7 +913,7 @@
     <script>
         // Embedded price data - update this section monthly
         const PRICE_DATA = {
-            "lastUpdated": "2026-02-05",
+            "lastUpdated": "2026-02-22",
             "states": {
                 "OR": {
                     "name": "Oregon",
@@ -968,6 +977,13 @@
                     "dataDate": "2025-12",
                     "source": "https://mn.gov/ocm/data-reports/dashboards/cannabis-market-monitor.jsp",
                     "notes": "Average retail price per gram"
+                },
+                "MT": {
+                    "name": "Montana",
+                    "flowerPrice": 5.32,
+                    "dataDate": "2025-06",
+                    "source": "https://revenue.mt.gov/card/cannabis/retail-price-studies/",
+                    "notes": "Retail price study average per gram"
                 },
                 "CT": {
                     "name": "Connecticut",
