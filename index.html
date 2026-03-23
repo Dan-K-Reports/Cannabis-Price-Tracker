@@ -87,7 +87,7 @@
             "@id": "https://prices.dankreports.com/"
           },
           "datePublished": "2026-01-20",
-          "dateModified": "2026-03-22",
+          "dateModified": "2026-03-23",
           "temporalCoverage": "2024-12/2026-03",
           "variableMeasured": [
             {
@@ -103,22 +103,150 @@
           ],
           "measurementTechnique": "Compiled from official state regulatory dashboards and reports; standardized to USD per gram for cross-state comparability.",
           "spatialCoverage": [
-            {"@type": "Place", "name": "California"},
-            {"@type": "Place", "name": "Colorado"},
-            {"@type": "Place", "name": "Connecticut"},
-            {"@type": "Place", "name": "Illinois"},
-            {"@type": "Place", "name": "Maine"},
-            {"@type": "Place", "name": "Maryland"},
-            {"@type": "Place", "name": "Massachusetts"},
-            {"@type": "Place", "name": "Michigan"},
-            {"@type": "Place", "name": "Minnesota"},
-            {"@type": "Place", "name": "Montana"},
-            {"@type": "Place", "name": "Ohio"},
-            {"@type": "Place", "name": "Oregon"},
-            {"@type": "Place", "name": "Pennsylvania"},
-            {"@type": "Place", "name": "Virginia"},
-            {"@type": "Place", "name": "Hawaii"},
-            {"@type": "Place", "name": "Rhode Island"}
+            {
+              "@type": "Place",
+              "name": "California",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 36.7783,
+                "longitude": -119.4179
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Colorado",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.5501,
+                "longitude": -105.7821
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Connecticut",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 41.6032,
+                "longitude": -73.0877
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Illinois",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 40.6331,
+                "longitude": -89.3985
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Maine",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 45.2538,
+                "longitude": -69.4455
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Maryland",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.0458,
+                "longitude": -76.6413
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Massachusetts",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 42.4072,
+                "longitude": -71.3824
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Michigan",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 44.3148,
+                "longitude": -85.6024
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Minnesota",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 46.7296,
+                "longitude": -94.6859
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Montana",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 46.8797,
+                "longitude": -110.3626
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Ohio",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 40.4173,
+                "longitude": -82.9071
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Oregon",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 43.8041,
+                "longitude": -120.5542
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Pennsylvania",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 41.2033,
+                "longitude": -77.1945
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Virginia",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 37.4316,
+                "longitude": -78.6569
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Hawaii",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 21.3069,
+                "longitude": -157.8583
+              }
+            },
+            {
+              "@type": "Place",
+              "name": "Rhode Island",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 41.5801,
+                "longitude": -71.4774
+              }
+            }
           ],
           "distribution": [
             {
@@ -143,7 +271,7 @@
             "@id": "https://prices.dankreports.com/#dataset"
           },
           "datePublished": "2026-01-20",
-          "dateModified": "2026-03-22",
+          "dateModified": "2026-03-23",
           "inLanguage": "en-US"
         }
       ]
@@ -157,6 +285,7 @@
     
     <style>
         :root {
+            /* Color System - Dark Financial Data Theme */
             --bg-primary: #0a0e14;
             --bg-secondary: #151a23;
             --bg-tertiary: #1e2532;
@@ -168,11 +297,17 @@
             --text-tertiary: #6e7681;
             --border: #30363d;
             --overlay: rgba(10, 14, 20, 0.95);
+            
+            /* Price gradient scale */
             --price-low: #00ff88;
             --price-mid: #ffd700;
             --price-high: #ff4757;
+            
+            /* Typography */
             --font-mono: 'JetBrains Mono', monospace;
             --font-serif: 'Crimson Pro', serif;
+            
+            /* Spacing */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
@@ -180,7 +315,11 @@
             --space-xl: 4rem;
         }
         
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
         body {
             font-family: var(--font-mono);
@@ -190,11 +329,14 @@
             overflow-x: hidden;
         }
         
+        /* Grid Background Pattern */
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: 
                 linear-gradient(var(--border) 1px, transparent 1px),
                 linear-gradient(90deg, var(--border) 1px, transparent 1px);
@@ -209,6 +351,7 @@
             50% { opacity: 0.08; }
         }
         
+        /* Header */
         header {
             padding: var(--space-lg) var(--space-md);
             border-bottom: 2px solid var(--border);
@@ -218,11 +361,20 @@
         }
         
         @keyframes slideDown {
-            from { transform: translateY(-100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         
-        .header-content { max-width: 1400px; margin: 0 auto; }
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
         
         h1 {
             font-family: var(--font-mono);
@@ -259,7 +411,8 @@
         }
         
         .pulse-dot {
-            width: 8px; height: 8px;
+            width: 8px;
+            height: 8px;
             background: var(--accent-green);
             border-radius: 50%;
             animation: pulse 2s ease-in-out infinite;
@@ -271,12 +424,24 @@
         }
         
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
-        .container { max-width: 1400px; margin: 0 auto; padding: var(--space-lg) var(--space-md); }
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--space-lg) var(--space-md);
+        }
         
+        /* Stats Overview */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -306,10 +471,28 @@
             box-shadow: 0 12px 40px rgba(0, 255, 136, 0.15);
         }
         
-        .stat-label { font-size: 0.75rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-xs); }
-        .stat-value { font-size: 2rem; font-weight: 700; color: var(--accent-green); font-family: var(--font-mono); }
-        .stat-sublabel { font-size: 0.875rem; color: var(--text-secondary); margin-top: var(--space-xs); }
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-xs);
+        }
         
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            font-family: var(--font-mono);
+        }
+        
+        .stat-sublabel {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: var(--space-xs);
+        }
+        
+        /* Map Section */
         .map-section {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
@@ -324,8 +507,10 @@
         .map-section::before {
             content: '';
             position: absolute;
-            top: -50%; right: -50%;
-            width: 100%; height: 100%;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
             background: radial-gradient(circle, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
             animation: rotate 30s linear infinite;
         }
@@ -344,11 +529,32 @@
             gap: var(--space-md);
         }
         
-        .section-title { font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+        }
         
-        .legend { display: flex; gap: var(--space-md); align-items: center; flex-wrap: wrap; }
-        .legend-item { display: flex; align-items: center; gap: var(--space-xs); font-size: 0.75rem; color: var(--text-secondary); }
-        .legend-color { width: 20px; height: 12px; border-radius: 3px; }
+        .legend {
+            display: flex;
+            gap: var(--space-md);
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 12px;
+            border-radius: 3px;
+        }
         
         .map-container {
             position: relative;
@@ -359,6 +565,7 @@
             gap: var(--space-md);
         }
         
+        /* State Cards */
         .state-card {
             background: var(--bg-tertiary);
             border: 1px solid var(--border);
@@ -373,13 +580,17 @@
         .state-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0;
-            width: 4px; height: 100%;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
             background: var(--card-accent);
             transition: width 0.3s ease;
         }
         
-        .state-card:hover::before { width: 8px; }
+        .state-card:hover::before {
+            width: 8px;
+        }
         
         .state-card:hover {
             transform: translateX(4px);
@@ -387,11 +598,41 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
         
-        .state-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-sm); }
-        .state-name { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono); }
-        .state-code { font-size: 0.75rem; color: var(--text-tertiary); background: var(--bg-primary); padding: 2px 8px; border-radius: 4px; }
-        .price-display { font-size: 2.5rem; font-weight: 700; color: var(--card-accent); margin: var(--space-sm) 0; font-family: var(--font-mono); }
-        .price-label { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: var(--space-md); }
+        .state-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .state-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+        }
+        
+        .state-code {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            background: var(--bg-primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .price-display {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--card-accent);
+            margin: var(--space-sm) 0;
+            font-family: var(--font-mono);
+        }
+        
+        .price-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
         
         .state-meta {
             display: flex;
@@ -403,8 +644,12 @@
             padding-top: var(--space-sm);
         }
         
-        .meta-row { display: flex; justify-content: space-between; }
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+        }
         
+        /* Data Table */
         .table-section {
             background: var(--bg-secondary);
             border: 1px solid var(--border);
@@ -414,10 +659,19 @@
             animation: fadeInUp 0.8s 0.7s both;
         }
         
-        .table-wrapper { overflow-x: auto; }
+        .table-wrapper {
+            overflow-x: auto;
+        }
         
-        table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-        thead { background: var(--bg-tertiary); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+        
+        thead {
+            background: var(--bg-tertiary);
+        }
         
         th {
             padding: var(--space-md);
@@ -430,15 +684,45 @@
             border-bottom: 2px solid var(--border);
         }
         
-        tbody tr { border-bottom: 1px solid var(--border); transition: background 0.2s ease; }
-        tbody tr:hover { background: var(--bg-tertiary); }
-        td { padding: var(--space-md); color: var(--text-primary); }
-        .rank-cell { font-weight: 700; color: var(--accent-green); }
-        .price-cell { font-weight: 700; font-family: var(--font-mono); font-size: 1.1rem; }
+        tbody tr {
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s ease;
+        }
         
-        .source-link { color: var(--accent-green); text-decoration: none; font-size: 0.75rem; opacity: 0.7; transition: opacity 0.2s ease; }
-        .source-link:hover { opacity: 1; text-decoration: underline; }
+        tbody tr:hover {
+            background: var(--bg-tertiary);
+        }
         
+        td {
+            padding: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .rank-cell {
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+        
+        .price-cell {
+            font-weight: 700;
+            font-family: var(--font-mono);
+            font-size: 1.1rem;
+        }
+        
+        .source-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-size: 0.75rem;
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+        }
+        
+        .source-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
         footer {
             border-top: 1px solid var(--border);
             padding: var(--space-lg) var(--space-md);
@@ -448,10 +732,25 @@
             font-size: 0.875rem;
         }
         
-        .footer-links { display: flex; justify-content: center; gap: var(--space-lg); margin-top: var(--space-md); flex-wrap: wrap; }
-        .footer-link { color: var(--accent-green); text-decoration: none; transition: opacity 0.2s ease; }
-        .footer-link:hover { opacity: 0.7; }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            margin-top: var(--space-md);
+            flex-wrap: wrap;
+        }
         
+        .footer-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+        
+        .footer-link:hover {
+            opacity: 0.7;
+        }
+        
+        /* Responsive */
         .footnote {
             margin-top: var(--space-md);
             font-size: 0.75rem;
@@ -462,13 +761,30 @@
         }
         
         @media (max-width: 768px) {
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .map-container { grid-template-columns: 1fr; }
-            .legend { justify-content: center; }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .map-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .legend {
+                justify-content: center;
+            }
         }
         
-        .loading { text-align: center; padding: var(--space-xl); color: var(--text-tertiary); }
-        .loading::after { content: '...'; animation: dots 1.5s steps(4, end) infinite; }
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: var(--space-xl);
+            color: var(--text-tertiary);
+        }
+        
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
         
         @keyframes dots {
             0%, 20% { content: '.'; }
@@ -570,17 +886,17 @@
                 
                 <h4 style="font-family: var(--font-mono); font-size: 1.1rem; margin: var(--space-md) 0 var(--space-sm) 0; color: var(--text-primary);">Mid-Range Markets ($4-$6/gram)</h4>
                 <p style="margin-bottom: var(--space-md);">
-                    <strong>Massachusetts ($4.01/gram)</strong> maintains moderate pricing despite its East Coast location, benefiting from a well-developed cultivation infrastructure and competitive retail environment. <strong>Illinois ($5.72/gram)</strong> shows pricing typical of a maturing Midwest market where cultivation costs are elevated. <strong>Montana ($5.32/gram)</strong> reflects pricing in a maturing Western market with tourism-driven demand. <strong>Rhode Island ($5.67/gram)</strong> shows competitive pricing for a small Northeast market that launched adult-use sales in December 2022.
+                    <strong>Massachusetts ($4.05/gram)</strong> maintains moderate pricing despite its East Coast location, benefiting from a well-developed cultivation infrastructure and competitive retail environment. <strong>Illinois ($5.72/gram)</strong> shows pricing typical of a maturing Midwest market where cultivation costs are elevated. <strong>Montana ($5.32/gram)</strong> reflects pricing in a maturing Western market with tourism-driven demand. <strong>Rhode Island ($5.67/gram)</strong> shows competitive pricing for a small Northeast market that launched adult-use sales in December 2022.
                 </p>
                 
                 <h4 style="font-family: var(--font-mono); font-size: 1.1rem; margin: var(--space-md) 0 var(--space-sm) 0; color: var(--text-primary);">High-Price Markets (Over $6/gram)</h4>
                 <p style="margin-bottom: var(--space-md);">
-                    <strong>Ohio ($6.31/gram)</strong> shows elevated pricing in a young adult-use market (sales began August 2024) constrained by limited licensing. <strong>Maine ($6.16/gram)</strong> reflects pricing dynamics in smaller East Coast markets with limited economies of scale. <strong>Pennsylvania ($7.59/gram)</strong> maintains higher pricing typical of a medical-only program with restricted licensing. <strong>Connecticut ($7.44/gram)</strong> shows pricing in a maturing Northeast market that launched adult-use sales in January 2023. <strong>Maryland ($7.84/gram)</strong> represents elevated pricing characteristic of a newer market (adult-use sales began July 2023) still developing cultivation capacity. <strong>Hawaii ($9.20/gram)</strong> reflects pricing in a medical-only island market with just 25 dispensaries; geographic isolation drives inherent cost premiums. <strong>Virginia ($10.16/gram)</strong> shows pricing typical of a market in its earliest stages, with limited retail infrastructure driving higher costs. <strong>Minnesota ($13.54/gram)</strong> shows the highest prices in the nation, reflecting an extremely new market (adult-use sales began August 2024) with very limited retail infrastructure and cultivator capacity.
+                    <strong>California ($6.11/gram)</strong> reflects pricing in the nation's largest cannabis market, where a 15% state excise tax, local taxes that can exceed 10% in some municipalities, and high regulatory compliance costs push retail flower prices well above what the state's massive cultivation capacity would otherwise produce. The price is derived from packaged eighths — the most common consumer format by volume — rather than bulk half-ounce pricing, which reaches a floor of $3.14/g. <strong>Ohio ($6.31/gram)</strong> shows elevated pricing in a young adult-use market (sales began August 2024) constrained by limited licensing and high demand from a large population base. <strong>Maine ($6.16/gram)</strong> reflects pricing dynamics in smaller East Coast markets with limited economies of scale. <strong>Pennsylvania ($7.59/gram)</strong> maintains higher pricing typical of a medical-only program with restricted licensing and no adult-use market to drive competitive pressure. <strong>Connecticut ($7.44/gram)</strong> shows pricing typical of a maturing Northeast market that launched adult-use sales in January 2023, where prices remain elevated as the retail infrastructure continues to develop. <strong>Maryland ($7.84/gram)</strong> represents elevated pricing characteristic of a newer market (adult-use sales began July 2023) still developing cultivation capacity and distribution networks. <strong>Hawaii ($9.20/gram)</strong> reflects pricing in a medical-only island market with just 25 dispensaries serving 1.45 million residents; geographic isolation drives inherent cost premiums. <strong>Virginia ($10.16/gram)</strong> shows pricing typical of a market in its earliest stages, with limited retail infrastructure driving higher costs. <strong>Minnesota ($13.54/gram)</strong> shows the highest prices in the nation, reflecting an extremely new market (adult-use sales began August 2024) with very limited retail infrastructure and cultivator capacity. As these markets mature, prices are expected to decline toward the national median.
                 </p>
                 
                 <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin: var(--space-lg) 0 var(--space-md) 0; color: var(--accent-green);">Data Sources and Methodology</h3>
                 <p style="margin-bottom: var(--space-md);">
-                    All pricing data is sourced directly from official state cannabis regulatory agencies. We compile the most recent available data for each state, which typically represents average or median retail pricing for cannabis flower. Data collection dates vary by state based on their reporting schedules - most states publish monthly or quarterly market data.
+                    All pricing data is sourced directly from official state cannabis regulatory agencies. We compile the most recent available data for each state, which typically represents average or median retail pricing for cannabis flower (also called "buds" or "usable marijuana"). Data collection dates vary by state based on their reporting schedules - most states publish monthly or quarterly market data.
                 </p>
                 
                 <p style="margin-bottom: var(--space-md);">
@@ -620,7 +936,7 @@
                     </tbody>
                 </table>
             </div>
-            <p class="footnote">* California eighth-format price per DCC Price per Unit Report, Jan–Feb 2026. Bulk half-ounce floor: $3.14/g.</p>
+            <p class="footnote">* California eighth-format price per DCC Price per Unit Report, Jan–Feb 2026. Bulk half-oz floor: $3.14/g.</p>
         </section>
     </main>
     
@@ -633,13 +949,14 @@
     </footer>
     
     <script>
+        // Embedded price data - update this section monthly
         const PRICE_DATA = {
-            "lastUpdated": "2026-03-22",
+            "lastUpdated": "2026-02-22",
             "states": {
                 "OR": {
                     "name": "Oregon",
                     "flowerPrice": 3.33,
-                    "dataDate": "2026-02",
+                    "dataDate": "2025-12",
                     "source": "https://www.oregon.gov/olcc/marijuana/pages/marijuana-market-data.aspx",
                     "notes": "Median retail price - Usable MJ (flower)"
                 },
@@ -648,7 +965,7 @@
                     "flowerPrice": 3.12,
                     "dataDate": "2025-Q4",
                     "source": "https://public.tableau.com/app/profile/cu.business.research.division/viz/ColoradoMEDDashboard/Overview",
-                    "notes": "Average flower price"
+                    "notes": "Average flower price, MoM change: -3.8%"
                 },
                 "IL": {
                     "name": "Illinois",
@@ -666,9 +983,9 @@
                 },
                 "MA": {
                     "name": "Massachusetts",
-                    "flowerPrice": 4.01,
-                    "dataDate": "2025-11",
-                    "source": "https://masscannabiscontrol.com/open-data/data-catalog/",
+                    "flowerPrice": 4.05,
+                    "dataDate": "2026-01",
+                    "source": "https://masscannabiscontrol.com/open-data/sales-and-product-distribution/",
                     "notes": "Average retail price per gram"
                 },
                 "CA": {
@@ -751,6 +1068,7 @@
             }
         };
         
+        // Load data function - now uses embedded data
         function loadPriceData() {
             renderData(PRICE_DATA);
         }
@@ -765,6 +1083,7 @@
             const states = Object.values(data.states);
             const prices = states.map(s => s.flowerPrice).sort((a, b) => a - b);
             
+            // Calculate stats
             const stateCount = states.length;
             const lowestPrice = Math.min(...prices);
             const highestPrice = Math.max(...prices);
@@ -773,6 +1092,7 @@
             const lowestState = states.find(s => s.flowerPrice === lowestPrice).name;
             const highestState = states.find(s => s.flowerPrice === highestPrice).name;
             
+            // Update stats cards
             document.getElementById('stateCount').textContent = stateCount;
             document.getElementById('lowestPrice').textContent = `$${lowestPrice.toFixed(2)}`;
             document.getElementById('lowestState').textContent = lowestState;
@@ -780,9 +1100,11 @@
             document.getElementById('highestState').textContent = highestState;
             document.getElementById('medianPrice').textContent = `$${medianPrice.toFixed(2)}`;
             
+            // Render state cards
             const mapContainer = document.getElementById('mapContainer');
             mapContainer.innerHTML = '';
             
+            // Sort states by price for display
             const sortedStates = [...states].sort((a, b) => a.flowerPrice - b.flowerPrice);
             
             sortedStates.forEach((state, index) => {
@@ -818,6 +1140,7 @@
                 mapContainer.appendChild(card);
             });
             
+            // Render table
             const tableBody = document.getElementById('tableBody');
             tableBody.innerHTML = '';
             
@@ -838,6 +1161,7 @@
             });
         }
         
+        // Load data on page load
         document.addEventListener('DOMContentLoaded', loadPriceData);
     </script>
 </body>
