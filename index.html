@@ -271,7 +271,7 @@
                 "MS": {"name": "Mississippi","flowerPrice": 6.43,"dataDate": "2025-annual","source": "https://www.mmcp.ms.gov/sites/default/files/2026/January%202026/Mississippi%20Cannabis%20Program%20Annual%20Report%202025.pdf","notes": "Medical-only. Price per gram derived from the MMCP CY 2025 Annual Report average unit cost for Bud/Flower/Shake/Trim ($22.50 &divide; 3.5g standard eighth-jar format = $6.43/g). Pre-rolls are reported separately ($27.45/unit)."}
             }
         };
-        const ARTICLE_OVERRIDES={"OR":"https://www.dankreports.com/oregon-cannabis-market-analysis-success/","CO":"https://www.dankreports.com/colorado-cannabis-10-year-analysis/"};
+        const ARTICLE_OVERRIDES={"OR":"https://www.dankreports.com/oregon-cannabis-market-analysis-success/","CO":"https://www.dankreports.com/colorado-cannabis-10-year-analysis/","MA":"https://www.dankreports.com/massachusetts-cannabis-licensing-trap/","MI":"https://www.dankreports.com/michigan-cannabis-market-export-bubble/","CA":"https://www.dankreports.com/california-cannabis-market-failure-analysis/","NJ":"https://www.dankreports.com/new-jersey-cannabis-sales-analysis/"};
         function getArticleUrl(stateCode,stateName){return ARTICLE_OVERRIDES[stateCode]||`https://www.dankreports.com/${stateName.toLowerCase().replace(/ /g,'-')}-cannabis-market-analysis/`}
         function loadPriceData(){renderData(PRICE_DATA)}
         function getPriceColor(price){if(price<5)return'var(--price-low)';if(price<8)return'var(--price-mid)';return'var(--price-high)'}
@@ -289,7 +289,7 @@
                 const stateCode=Object.keys(data.states).find(key=>data.states[key].name===state.name);
                 const card=document.createElement('div');card.className='state-card';
                 card.style.setProperty('--card-accent',getPriceColor(state.flowerPrice));card.style.animationDelay=`${index*0.05}s`;
-                card.innerHTML=`<div class="state-header"><div class="state-name">${state.name}</div><div class="state-code">${stateCode}</div></div><div class="price-display">$${state.flowerPrice.toFixed(2)}</div><div class="price-label">per gram</div><div class="state-meta"><div class="meta-row"><span>Data Date:</span><span>${state.dataDate}</span></div><div class="meta-row"><span>Source:</span><a href="${state.source}" target="_blank" class="source-link">Official Data</a></div><div class="meta-row"><span>Analysis:</span><a href="${getArticleUrl(stateCode,state.name)}" class="source-link">${state.name} Market &rarr;</a></div>${state.notes?`<div style="margin-top:0.5rem;font-style:italic;opacity:0.7;">${state.notes}</div>`:''}</div>`;
+                card.innerHTML=`<div class="state-header"><div class="state-name">${state.name}</div><div class="state-code">${stateCode}</div></div><div class="price-display">$${state.flowerPrice.toFixed(2)}</div><div class="price-label">per gram</div><div class="state-meta"><div class="meta-row"><span>Data Date:</span><span>${state.dataDate}</span></div><div class="meta-row"><span>Source:</span><a href="${state.source}" target="_blank" class="source-link">Official Data</a></div><div class="meta-row"><span>Analysis:</span><a href="${getArticleUrl(stateCode,state.name)}" class="source-link">${state.name} Market</a></div>${state.notes?`<div style="margin-top:0.5rem;font-style:italic;opacity:0.7;">${state.notes}</div>`:''}</div>`;
                 mapContainer.appendChild(card);
             });
             const tableBody=document.getElementById('tableBody');tableBody.innerHTML='';
